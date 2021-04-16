@@ -31,7 +31,9 @@ const AddArticle = ({ saveArticle }) => {
                 placeHolder="Body"
                 onChange={handleArticleData}
             />
+        <button>Add article</button>
         </form>
+        
     )
 }
 
