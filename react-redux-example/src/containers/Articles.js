@@ -1,6 +1,7 @@
 import React from "react"
 import Article from "../components/Article/Article"
 import AddArticle from "../components/AddArticle/AddArticle"
+import { addArticle } from "../store/actionCreators"
 import * as actionTypes from "../store/actionTypes"
 import { connect } from 'react-redux';
 
@@ -21,8 +22,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        saveArticle: article =>
-            dispatch({ type: actionTypes.ADD_ARTICLE, articleData: { article } }),
+        saveArticle: article => dispatch(addArticle(article)),
     }
 }
 
