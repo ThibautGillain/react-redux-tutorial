@@ -6,3 +6,11 @@ export const addArticle = article => {
         article,
     }
 }
+
+export const simulateHttpRequest = article => {
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(addArticle(article))
+        }, 3000)
+    }
+}

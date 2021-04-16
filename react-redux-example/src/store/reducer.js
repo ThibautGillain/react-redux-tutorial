@@ -19,6 +19,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 articles: state.articles.concat(newArticle),
             }
+        default:
+            console.log("default")
     }
     return state;
 }
